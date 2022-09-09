@@ -14,6 +14,7 @@ int main() {
     std::cout << "Enter date: ";
     std::string date;
     std::cin >> date;
+    std::string time = date;
 
     std::ifstream fin("Current_Reservoir_Levels.tsv");
     if (fin.fail()) {
@@ -23,19 +24,14 @@ int main() {
     std::string junk;
     getline(fin,junk);
     
-    std::string eastSt;
-    std::string eastEl;
-    std::string westSt;
-    std::string westEl;
-
-    while (fin >> date >> eastSt >> eastEl >> westSt >> westEl) {
-
+    std::string eastSt ="AUGEVolume";
+  
+    while (fin >> date >> eastSt) {
+      if (date == time){
+        std::cout << "East basin Storage: " << eastSt << " billion gallons" << std::endl;
         fin.ignore(INT_MAX, '\n');
-
-        if (fin == date) {
-            std::cout << "East basin Storage: " << eastSt << " billion gallons" << std::endl;
         }
-    }
+      }
     fin.close();
     return 0;
 }
