@@ -1,10 +1,10 @@
 * Fall 2022 - Lab 03
 
-* Last name:
+* Last name: Zhang
 
-* First name:
+* First name: Judy
 
-* GitHub username:
+* GitHub username: JudyZhang05
 
 * Notes:
 
