@@ -10,7 +10,7 @@
 #include <cstdlib>
 #include <climits>
 
-int main() {
+int east() {
     std::cout << "Enter date: ";
     std::string date;
     std::cin >> date;
