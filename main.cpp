@@ -1,10 +1,10 @@
 // add your code as appropriate 
 #include <iostream>
-#include "east-storage.cpp"
+#include "reservoir.cpp"
 
 int main()
 {
-  east();  
+  get_east_storage("05/12/2018");  
 
   
   return 0;
