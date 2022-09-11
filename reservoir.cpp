@@ -2,8 +2,7 @@
  * Author: Judy Zhang
  * Course: CSCI-135
  * Instructor: Professor Zamansky
- * Assignment: Task A. Write a program east-storage.cpp that asks the user to input a string representing 
- * the date (in MM/DD/YYYY format), and prints out the East basin storage on that day.
+ * Assignment: Task A-C
  */
 // add your code
 #include <iostream>
@@ -60,7 +59,8 @@ double get_min_east(){
   std::cout << "minimum storage in East basin: " << min << " billion gallons" << std::endl;
   
   return 0;
-} 
+}
+
 double get_max_east(){
     std::ifstream fin("Current_Reservoir_Levels.tsv");
     if (fin.fail()) {
