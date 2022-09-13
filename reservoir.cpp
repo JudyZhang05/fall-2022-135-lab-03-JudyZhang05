@@ -9,6 +9,7 @@
 #include <fstream>
 #include <cstdlib>
 #include <climits>
+#include "main.cpp"
 
 double get_east_storage(std::string date) {
     std::cout << "Enter date: ";
