@@ -5,10 +5,10 @@
 
 int main()
 {
-  get_east_storage(std::string date);
+  get_east_storage(std::string (date));
   get_min_east();
   get_max_east();
-  compare_basins(std::string date);
+  compare_basins(std::string (date));
 
   return 0;
 }

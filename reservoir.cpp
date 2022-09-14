@@ -14,7 +14,6 @@
 double get_east_storage(std::string date) {
     std::cout << "Enter date: ";
     std::cin >> date;
-    std::string time = date;
 
     std::ifstream fin("Current_Reservoir_Levels.tsv");
     if (fin.fail()) {
@@ -25,14 +24,16 @@ double get_east_storage(std::string date) {
     getline(fin,junk);
     
     std::string eastSt;
+    std::string point;
 
-    while (fin >> date >> eastSt) {
-      if (date == time){
+    while (fin >> point >> eastSt) {
+      if (date == point){
         std::cout << "East basin storage: " << eastSt << " billion gallons" << std::endl;
         fin.ignore(INT_MAX, '\n');
         }
       else{
-        std::cout << "No worky" << std::endl;
+        std::cout << "oof" << std::endl;
+        break;
       }
       }
     return 0;
