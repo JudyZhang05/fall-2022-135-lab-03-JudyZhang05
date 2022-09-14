@@ -27,14 +27,11 @@ double get_east_storage(std::string date) {
     std::string point;
 
     while (fin >> point >> eastSt) {
+      fin.ignore(INT_MAX, '\n');
       if (date == point){
         std::cout << "East basin storage: " << eastSt << " billion gallons" << std::endl;
         fin.ignore(INT_MAX, '\n');
         }
-      else{
-        std::cout << "oof" << std::endl;
-        break;
-      }
       }
     return 0;
 }
@@ -49,10 +46,10 @@ double get_min_east(){
     getline(fin,junk);
 
   std::string eastSt;
-  std::string date;
+  std::string point;
   float min = 1000.00;
   
-  while (fin >> date >> eastSt){
+  while (fin >> point >> eastSt){
     float num = std::stof(eastSt);
     fin.ignore(INT_MAX, '\n');
     if (num < min){
@@ -75,10 +72,10 @@ double get_max_east(){
     getline(fin,junk);
 
   std::string eastSt;
-  std::string date;
+  std::string point;
   float max = 0.00;
   
-  while (fin >> date >> eastSt){
+  while (fin >> point >> eastSt){
     float num = std::stof(eastSt);
     fin.ignore(INT_MAX, '\n');
     if (num > max){
