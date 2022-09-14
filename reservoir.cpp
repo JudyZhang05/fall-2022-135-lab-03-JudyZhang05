@@ -9,7 +9,7 @@
 #include <fstream>
 #include <cstdlib>
 #include <climits>
-#include "main.cpp"
+#include "reservoir.h"
 
 double get_east_storage(std::string date) {
     std::cout << "Enter date: ";
@@ -31,8 +31,10 @@ double get_east_storage(std::string date) {
         std::cout << "East basin storage: " << eastSt << " billion gallons" << std::endl;
         fin.ignore(INT_MAX, '\n');
         }
+      else{
+        std::cout << "No worky" << std::endl;
       }
-    fin.close();
+      }
     return 0;
 }
 
