@@ -9,15 +9,14 @@
  #include <cstdlib>
  #include <climits>
  #include <vector>
- #include "main.cpp"
+ 
+ #include "reverseorder.h"
 
 void reverse_order(std::string date1, std::string date2){
-  std::string early;
-  std::string later;
   std::cout << "Enter earlier date: ";
-  std::cin >> early;
+  std::cin >> date1;
   std::cout << "Enter later date: ";
-  std::cin >> later;
+  std::cin >> date2;
 
   std::ifstream fin("Current_Reservoir_Levels.tsv");
      if (fin.fail()) {
@@ -44,10 +43,10 @@ void reverse_order(std::string date1, std::string date2){
     fin.ignore(INT_MAX, '\n' );
     }  
   for (int i = elevation.size() - 1; i >= 0; i--){
-    if (time[i] == later || loop == "y"){
+    if (time[i] == date2 || loop == "y"){
       loop = "y";
       std::cout << time[i] << " " << elevation[i] << " ft" << std::endl;
-      if (time[i] == early){
+      if (time[i] == date1){
         loop = "n";
       }
     }
